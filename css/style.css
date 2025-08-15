@@ -334,8 +334,6 @@ header .container nav ul li a:hover {
     position: relative;
 }
 
-.services .container {}
-
 .services .container h2 {
     opacity: 0.1;
 }
@@ -407,8 +405,6 @@ header .container nav ul li a:hover {
     background-color: var(--primary-color);
     position: relative;
 }
-
-.lets-talk .container {}
 
 .lets-talk .container h2 {
     opacity: 0.2;
