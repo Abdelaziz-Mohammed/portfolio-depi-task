@@ -398,6 +398,296 @@ header .container nav ul li a:hover {
 
 /* end services */
 
+/* start blog */
+
+.blog {
+    background-color: var(--primary-color);
+    padding: 80px 0;
+    position: relative;
+}
+
+.blog>h2 {
+    opacity: 0.1;
+    font-size: 180px;
+    margin: 0 25% 0 0;
+}
+
+@media (min-width: 768px) {
+    .blog .container h2 {
+        font-size: 120px;
+    }
+}
+
+.blog>.heading {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 767px) {
+    .blog>.heading {
+        flex-direction: column;
+    }
+}
+
+.blog>.heading p {
+    color: white;
+    font-size: 52px;
+    font-weight: 400;
+}
+
+.blog>.heading button {
+    outline: 0;
+    border: 1px solid white;
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blog>.heading button:hover {
+    color: var(--primary-color);
+    background-color: white;
+}
+
+.blog>.carousel {
+    overflow: hidden;
+    cursor: grab;
+    margin-top: 120px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(0deg, #040e27 0%, #040e27 70%, var(--primary-color) 70%, var(--primary-color) 100%);
+}
+
+.blog>.carousel>.carousel-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    scroll-behavior: smooth;
+}
+
+.blog>.carousel>.carousel-track>.carousel-box {
+    background-color: #040e27;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 400px;
+    user-select: none;
+    pointer-events: none;
+
+    img {
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+
+        span {
+            color: var(--primary-color);
+            font-size: 12px;
+        }
+
+        h3 {
+            color: white;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        &>div {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            img {
+                width: 45px;
+                height: 45px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 2px solid var(--primary-color);
+            }
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                p.name {
+                    color: white;
+                    font-size: 14px;
+                }
+
+                span.role {
+                    color: var(--light-color);
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* test */
+
+.carousel {
+    overflow: auto hidden;
+    /* the container scrolls */
+    scroll-behavior: auto;
+    -ms-overflow-style: none;
+    /* hide scrollbar (IE/Edge) */
+    scrollbar-width: none;
+    /* Firefox */
+    touch-action: pan-y;
+    /* allow vertical page scroll */
+    cursor: grab;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    /* space between cards */
+}
+
+.carousel-box {
+    flex: 0 0 clamp(260px, 33vw, 360px);
+    /* card width */
+    border-radius: 12px;
+    background: #fff;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+.carousel.dragging {
+    cursor: grabbing;
+}
+
+.carousel.dragging * {
+    user-select: none;
+}
+
+/* end blog */
+
+/* start testimonials */
+
+.testimonial {
+    padding: 80px 0 200px;
+    background-color: #dddddd2e;
+    position: relative;
+}
+
+.bg-heading {
+    opacity: 0.1;
+}
+
+@media (max-width: 992px) {
+    .bg-heading {
+        font-size: 100px;
+    }
+}
+
+.testimonial-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 120px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.carousel-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.carousel-item p {
+    font-size: 20px;
+    font-weight: normal;
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.carousel-item h3 {
+    color: var(--primary-color);
+}
+
+.carousel-item span {
+    color: var(--light-color);
+    margin-top: -20px;
+}
+
+button.prev,
+button.next {
+    color: black;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+button.prev:hover,
+button.next:hover {
+    color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+button.prev {
+    left: 0px;
+}
+
+button.next {
+    right: 0px;
+}
+
+/* end testimonials */
+
 /* start lets-talk */
 
 .lets-talk {
@@ -418,6 +708,8 @@ header .container nav ul li a:hover {
     justify-content: center;
     gap: 80px;
     padding: 40px 0;
+    position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 768px) {
